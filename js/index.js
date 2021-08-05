@@ -8,7 +8,6 @@ $().ready(function() {
   }).addTo(map);
 
   map.on('moveend', (data) => {
-    console.log(map.getCenter())
     randomCircle(map)
   })
 
@@ -28,10 +27,7 @@ function randomCircle(map) {
   for (let i = 0; i < 100; i++) {
     const randLat = ((Math.random() * 0.02) * getSign())
     const randLng = ((Math.random() * 0.02) * getSign())
-    console.log(randLat)
 
-    // const lat = 13.75318 + randLat
-    // const lng = 100.53173 + randLng
     const lat = map.getCenter().lat + randLat
     const lng = map.getCenter().lng + randLng
 
@@ -39,7 +35,7 @@ function randomCircle(map) {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.5,
-      radius: 50
+      radius: 30
     })
     .bindPopup(`Lat: ${lat}, Lng: ${lng}`)
     .addTo(map)
