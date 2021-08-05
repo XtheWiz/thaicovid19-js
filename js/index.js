@@ -39,9 +39,9 @@ function randomCircle(map) {
       color: 'red',
       fillColor: '#f03',
       fillOpacity: 0.5,
-      radius: 100
+      radius: 50
     })
-    .bindPopup('Hello')
+    .bindPopup(`Lat: ${lat}, Lng: ${lng}`)
     .addTo(map)
   }
 }
