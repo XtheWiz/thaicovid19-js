@@ -43,5 +43,5 @@ function randomCircle(map) {
 }
 
 function getSign() {
-  return (Math.floor((Math.random())) % 2) === 0 ? 1 : -1
+  return (Math.floor((Math.random() * 10)) % 2) === 0 ? 1 : -1
 }
